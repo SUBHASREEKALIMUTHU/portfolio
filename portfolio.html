@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subhasree K — Portfolio</title>
+  <style>
+    :root{--accent:#0b6efd;--muted:#6b7280;--card:#ffffff}
+    *{box-sizing:border-box}
+    body{font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:#f6f8fb; color:#0f172a}
+    header{background:linear-gradient(90deg,#ffffff 0%, #f0f6ff 100%);padding:28px 20px;border-bottom:1px solid #e6eefc}
+    .container{max-width:1000px;margin:24px auto;padding:0 16px}
+    .hero{display:flex;gap:16px;align-items:center}
+    .avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #0b6efd;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+    h1{margin:0;font-size:22px}
+    p.lead{margin:6px 0;color:var(--muted)}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .chip{background:#eef6ff;padding:6px 10px;border-radius:999px;color:var(--accent);font-weight:600;font-size:13px}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:18px}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(11,102,253,0.03)}
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .skills{display:flex;gap:8px;flex-wrap:wrap}
+    .skill{background:#f3f4f6;padding:6px 10px;border-radius:8px;font-size:13px;color:#111827}
+
+    .projects-list{display:flex;flex-direction:column;gap:12px}
+    .project{border:1px solid #eef2ff;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff)}
+    .project h4{margin:0 0 6px 0}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;border:none;background:var(--accent);color:#fff;font-weight:600;cursor:pointer}
+    .meta{color:var(--muted);font-size:13px}
+
+    aside .card + .card{margin-top:14px}
+    .contact a{display:block;color:var(--accent);text-decoration:none;margin-bottom:6px}
+
+    footer{max-width:1000px;margin:20px auto 60px;padding:0 16px;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:880px){.grid{grid-template-columns:1fr}.avatar{width:76px;height:76px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="hero">
+        <div class="avatar">
+  <img src="pic.png" alt="Subhasree K" />
+</div>
+
+        <div>
+          <h1>SUBHASREE K</h1>
+          <p class="lead">Final year Electronics and Communication Engineering Student</p>
+          <div class="chips">
+            <div class="chip">Python</div>
+            <div class="chip">HTML · CSS · JS</div>
+            <div class="chip">SQL</div>
+            <div class="chip">UI/UX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <section>
+        <div class="card">
+          <div class="section-title"><h3>About</h3><span class="meta">Sathyamangalam</span></div>
+          <p>To secure an opportunity where I can effectively utilize my skills, enhance my learning, and contribute meaningfully to the growth and success of the organization while advancing my career.</p>
+          <div style="margin-top:12px">
+            <strong>Technical Skills</strong>
+            <div class="skills" style="margin-top:8px">
+              <div class="skill">C</div>
+              <div class="skill">Java</div>
+              <div class="skill">Python</div>
+              <div class="skill">SQL</div>
+              <div class="skill">HTML/CSS</div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <strong>Soft Skills</strong>
+            <div class="chips" style="margin-top:8px">
+              <div class="chip" style="background:#fff;border:1px solid #eef2ff;color:#111827">Leadership</div>
+              <div class="chip" style="background:#fff;border:1px solid #eef2ff;color:#111827">Problem Solving</div>
+              <div class="chip" style="background:#fff;border:1px solid #eef2ff;color:#111827">Critical Thinking</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <div class="section-title"><h3>Projects</h3><div class="meta">Selected work</div></div>
+
+          <div class="projects-list">
+            <article class="project">
+              <h4>Food Dashboard</h4>
+              <p>Interactive web application to display and manage food items (name, category, nutrition) with search and filter features. Built with HTML, CSS, JS and a simple database integration.</p>
+              <div style="margin-top:8px"><button class="btn" onclick="openModal('food')">View details</button></div>
+            </article>
+
+            <article class="project">
+              <h4>E-commerce Website</h4>
+              <p>Mini shopping platform demonstrating responsive frontend development and product interactions.</p>
+              <div style="margin-top:8px"><button class="btn" onclick="openModal('ecom')">View details</button></div>
+            </article>
+
+            <article class="project">
+              <h4>Student Management System (CRUD)</h4>
+              <p>Backend-focused CRUD application using Python and SQL to store, retrieve and manage student records.</p>
+              <div style="margin-top:8px"><button class="btn" onclick="openModal('sms')">View details</button></div>
+            </article>
+
+            <article class="project">
+              <h4>Invigilation Duty Automation (MERN)</h4>
+              <p>Lottery-based system to assign invigilation duties fairly using scheduling logic, biometric integration, and time-tracking.</p>
+              <div style="margin-top:8px"><button class="btn" onclick="openModal('invig')">View details</button></div>
+            </article>
+
+            <article class="project">
+              <h4>Sales Dashboard (Excel)</h4>
+              <p>Excel dashboard that visualizes key performance metrics like sales and customer behavior for quick business insights.</p>
+            </article>
+          </div>
+
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <div class="section-title"><h3>Education</h3><div class="meta">Academic record</div></div>
+          <p><strong>Bachelor of Engineering — Bannari Amman Institute of Technology</strong><br>CGPA: 7.91</p>
+          <p style="margin-top:8px"><strong>12th</strong> — Rajalakshmi Genguswamy Matriculation (93%)<br><strong>10th</strong> — Rajalakshmi Genguswamy Matriculation (94%)</p>
+        </div>
+
+      </section>
+
+      <aside>
+        <div class="card contact">
+          <h3>Contact</h3>
+          <a href="#">Email: subhasreekalimuthu@gmail.com</a>
+          <a href="#">GitHub: https://github.com/SUBHASREEKALIMUTHU</a>
+          <a href="#">LinkedIn: https://www.linkedin.com/in/subhasree-kalimuthu-b58b95285?
+            utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app</a>
+          <div style="margin-top:8px;color:var(--muted)">Languages: English (R,W) · Tamil (R,W)</div>
+        </div>
+
+        <div class="card">
+          <h3>Interests & Activities</h3>
+          <p class="meta">Yoga · Gardening · Cooking · Tennis</p>
+        </div>
+
+        <div class="card">
+          <h3>Declaration</h3>
+          <p style="font-size:13px;color:var(--muted)">I hereby declare that the above information is true and correct to the best of my knowledge and belief.<br><br>Place: Sathyamangalam<br>Date: 25-10-2025</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- modal (simple) -->
+    <div id="modal" style="display:none;position:fixed;inset:0;background:rgba(2,6,23,0.6);align-items:center;justify-content:center;padding:20px">
+      <div id="modal-card" style="max-width:760px;width:100%;background:#fff;padding:20px;border-radius:12px;box-shadow:0 20px 50px rgba(2,6,23,0.4);">
+        <button onclick="closeModal()" style="float:right;border:none;background:transparent;font-size:18px;cursor:pointer">✕</button>
+        <div id="modal-content" style="clear:both"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="container">Generated from resume source. If you want to change wording, contact details, or add screenshots, tell me and I will update it.</footer>
+
+  <script>
+    const details = {
+      food: `
+        <h3>Food Dashboard</h3>
+        <p>A clean UI for browsing and managing food items with search, filter and detail view. Tech: HTML, CSS, JavaScript, (optional) SQLite or JSON for demo data.</p>
+        <ul>
+          <li>Features: List view, search, category filters, nutrition view.</li>
+          <li>How to demo: open index.html in browser; data stored in a local JSON or connected to lightweight backend.</li>
+        </ul>
+      `,
+      ecom: `
+        <h3>E-commerce Website</h3>
+        <p>Responsive frontend with product listing, product detail modal and add-to-cart UI. Tech: HTML, CSS, JS.</p>
+        <ul><li>Use localStorage to persist cart for demo.</li></ul>
+      `,
+      sms: `
+        <h3>Student Management System (CRUD)</h3>
+        <p>Python + SQL backend to perform Create, Read, Update, Delete on student records. Use Flask or CLI for interface. Use SQLite for zero-setup demo.</p>
+        <ul><li>Demo idea: Provide a REST API with Flask and a simple frontend that calls it.</li></ul>
+      `,
+      invig: `
+        <h3>Invigilation Duty Automation (MERN)</h3>
+        <p>Fullstack project using MongoDB, Express, React and Node. Implements lottery logic to assign invigilation duties fairly and biometric attendance integration for tracking.</p>
+      `
+    }
+
+    function openModal(key){
+      document.getElementById('modal-content').innerHTML = details[key] || '<p>No details available.</p>';
+      document.getElementById('modal').style.display = 'flex';
+    }
+    function closeModal(){document.getElementById('modal').style.display='none'}
+  </script>
+</body>
+</html>
